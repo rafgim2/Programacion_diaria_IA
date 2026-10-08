@@ -710,7 +710,7 @@ window.saveWeightsAuto=()=>{let a=+document.getElementById("wMaster").value,b=+d
 window.saveWeights=window.saveWeightsAuto;
 
 function openModal(t,sub,html){document.getElementById("printModal").style.display="";document.getElementById("modalTitle").textContent=t;document.getElementById("modalSub").textContent=sub||"";document.getElementById("modalBody").innerHTML=html;document.getElementById("modal").classList.add("show")}
-function closeModal(){stopDictation();document.getElementById("modal").classList.remove("show")}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
 window.openGame=async id=>{
  const l=getLessonById(id);if(!l){alert("No se ha podido localizar esta sesión.");return}
  document.getElementById("printModal").style.display="none";
